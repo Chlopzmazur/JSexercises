@@ -1,0 +1,22 @@
+{
+  "name": "project8",
+  "version": "1.0.0",
+  "description": "project8",
+  "main": "index.js",
+  "scripts": {
+    "test": "kodilla-tet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Wiktor",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0"
+  }
+}
