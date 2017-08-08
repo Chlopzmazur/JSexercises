@@ -1,7 +1,7 @@
 
 
-var x = document.getElementsByClassName('button');
-for (i=0; i<=x.length; i++) {
-var text =x[i].innerText;
+var btn = document.getElementsByClassName('button');
+for (i=0; i<=btn.length; i++){
+var text = btn[i].innerText;
 alert(text);
 }
