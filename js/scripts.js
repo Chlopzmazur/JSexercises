@@ -1,11 +1,15 @@
-var add = document.getElementById('addElem'),
-	list = document.getElementById('list');
-
-add.addEventListener('click',function(e){
-	var element = document.createElement('li');
-	element.innerHTML = 'item ';
-	element.innerHTML += document.getElementsByTagName('li').length;
-	list.appendChild(element);
-})
-
-
+$(function(){
+	var carouselList = $("#carousel ul");
+  setInterval(changeSlide, 4000); 
+  function changeSlide() {
+    carouselList.animate({'marginLeft':-800}, 500, moveFirstSlide);
+  };
+  changeSlide();
+  function moveFirstSlide() {
+    var firstItem = carouselList.find("li:first");
+    var lastItem = carouselList.find("li:last");
+    lastItem.after(firstItem);
+    carouselList.css({marginLeft:0});
+  };
+  
+});
