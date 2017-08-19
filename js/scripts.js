@@ -1,11 +1,21 @@
-var add = document.getElementById('addElem'),
-	list = document.getElementById('list');
+function Button(text) {
+	this.text = text || "Hello";
+}
 
-add.addEventListener('click',function(e){
-	var element = document.createElement('li');
-	element.innerHTML = 'item ';
-	element.innerHTML += document.getElementsByTagName('li').length;
-	list.appendChild(element);
-})
+Button.prototype = {
+	create: function() {
+		var self = this;
+		this.$element = $('<button>');
+		this.$element.text(this.text);
+		this.$element.appendTo($('body'));
+		this.$element.click(function() {
+		alert(self.text);
+	});
+	}
+}
 
+var btn1 = new Button('Howdy!');
+var btn2 = new Button('Welcome!');
 
+btn1.create();
+btn2.create();
