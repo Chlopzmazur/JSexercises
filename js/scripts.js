@@ -12,7 +12,7 @@ Button.prototype = {
 		alert(self.text);
 	});
 	}
-}
+};
 
 var btn1 = new Button('Howdy!');
 var btn2 = new Button('Welcome!');
