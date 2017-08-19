@@ -1,11 +1,19 @@
-var add = document.getElementById('addElem'),
-	list = document.getElementById('list');
+var span = $("span");
+    span.each(function(index, element) {
+});
+span.each(function(index, element) {
+  if(index % 2 == 0) {
+    $(element).css('color', 'red');
+  };
+});
 
-add.addEventListener('click',function(e){
-	var element = document.createElement('li');
-	element.innerHTML = 'item ';
-	element.innerHTML += document.getElementsByTagName('li').length;
-	list.appendChild(element);
-})
+var paragraphs = $('p');
+paragraphs.each(function(index, element) {
 
+    var button = ('<button class="btn" data-tmp="' + index + '">Click me</button>');
+    $(element).append(button);
 
+});
+$("button").click(function(){
+  alert($(this).attr("data-tmp"));
+});
