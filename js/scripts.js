@@ -1,21 +1,20 @@
-function Button(text) {
-	this.text = text || "Hello";
+var url = 'http://api.icndb.com/jokes/random';
+
+var button = document.getElementById('get-joke');
+button.addEventListener('click', function(){
+  getJoke();
+});
+
+var paragraph = document.getElementById('joke');
+
+function getJoke() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url);
+  xhr.addEventListener('load', function(){
+    var response = JSON.parse(xhr.response);
+    paragraph.innerHTML = response.value.joke;
+  });
+  xhr.send();
 }
 
-Button.prototype = {
-	create: function() {
-		var self = this;
-		this.$element = $('<button>');
-		this.$element.text(this.text);
-		this.$element.appendTo($('body'));
-		this.$element.click(function() {
-		alert(self.text);
-	});
-	}
-};
-
-var btn1 = new Button('Howdy!');
-var btn2 = new Button('Welcome!');
-
-btn1.create();
-btn2.create();
+var response = JSON.parse(xhr.response);
