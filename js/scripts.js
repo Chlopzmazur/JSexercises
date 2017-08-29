@@ -33,7 +33,7 @@ function setGameElements() {
         newGameElem.style.display = 'block';
         pickElem.style.display = 'none';
         resultsElem.style.display = 'none';
-    case 'notStarted':
+        break;
     default:
         newGameElem.style.display = 'block';
         pickElem.style.display = 'none';
