@@ -1,23 +1,41 @@
-img {
-  width: 800px;
-  height: 400px;
-  margin: 0 auto;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    font-weight: 200;
+    color: white;
+}
+body {
+  background-color: #55acee;
+}
+header {
+  margin-top: 20px;
+  text-align: center;
+}
+.trigger, .tweet {
+  text-decoration: none;
+  border: 1px solid #fff;
+  padding: 10px 0;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+  background-color: #55acee;
   display: block;
-}
-ul {
-  padding: 0;
-  margin: 0;
-  width: 4000px;
-}
-
-ul>li {
-  list-style: none;
-  float: left;
-}
-
-#carousel {
-  border: solid;
-  width: 800px;
-  overflow: hidden;
+  width: 600px;
   margin: 0 auto;
- }
+  margin-top: 20px;
+}
+.trigger:focus {
+  border: 1px solid #fff;
+}
+
+.tweet {
+  text-align: center;
+  text-decoration: none;
+}
+.trigger {
+  margin-top: 60px;
+}
