@@ -14,6 +14,9 @@ header {
   margin-top: 20px;
   text-align: center;
 }
+.box {
+  text-align: center;
+}
 .trigger, .tweet {
   text-decoration: none;
   border: 1px solid #fff;
