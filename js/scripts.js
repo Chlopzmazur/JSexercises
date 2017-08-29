@@ -18,7 +18,7 @@ function createTweet(input) {
         quoteAuthor = "Unknown author";
     }
 
-    if (tweetText.length > 140) {
+    if (tweetText.length < 140) {
     getQuote();
 	} else {
     var tweet = tweetLink + encodeURIComponent(tweetText);
