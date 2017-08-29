@@ -35,8 +35,4 @@ $(document).ready(function() {
     $('.trigger').click(function() {
         getQuote();
     });
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 0e6bce51c026abf46ad985ac05924d45a8f611d2
